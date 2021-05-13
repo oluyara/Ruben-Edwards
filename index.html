@@ -4,25 +4,96 @@
         <title>
                 Ninja Survey
         </title>
+        <style>
+            body {
+                background: #222;
+                color: #eee;
+                font-family: monospace;
+            }
+            main {
+                width: 50%;
+                background: #333;
+                margin: 10px auto;
+                padding: 5px;
+                border-radius: 10px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 44px;
+                text-align: center;
+            }
+            p {
+                font-size: 28px;
+            }
+            label {
+                font-size: 22px;
+            }
+            select {
+                font-size: 22px;
+            }
+            footer {
+                background: #eee;
+                color: black;
+                width: 50%;
+                text-align: center;
+                margin: 10px auto;
+                border-radius: 10px;
+            }
+            .text-class {
+                font-size: 22;
+                width: 50%;
+                height: 2em; 
+            }
+            .submit-class {
+                font-size: 24px;
+                width: 25%;
+                height: 3em;
+            }
+            #description {
+                font-size: 22px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <h1 id="title">Ninja Survey</h1>
-        <p>If you're a ninja please take this survey.</p>
-        <form id="survey-form">
-            <label for="name" id="name-label">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="email" id="email-label">Email</label>
-            <input type="email" id="email" name="email">
-            <label for="number" id="number-label">Phone Number</label>
-            <input type="number" id="number" name="number" min="12" max="60">
-            <label for="dropdown" id="dropdown-label">Choose a Ninja Way</label>
-            <select id="dropdown" name="ninja-ways">
-                <option value="taijutsu">Taijutsu</option>
-                <option value="ninjutsu">Ninjutsu</option>
-                <option value="genjutsu">Genjutsu</option>
-            </select>
-            <label for="shurikan" id="shurikan-label"></label>
-            
-        </form>
+        <p id="description">If you're a ninja please take this survey.</p>
+        <hr>
+        <main>
+            <form id="survey-form">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" name="name" class="text-class" placeholder="Your name here" required><br><br>
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" name="email" class="text-class" placeholder="youremail@example.com" required><br><br>
+                <label for="number" id="number-label">Age</label>
+                <input type="number" id="number" name="number" min="12" max="60" class="text-class" placeholder="Between 12 and 60" required><br><br><br>
+                <label for="dropdown" id="dropdown-label">Choose a Ninja Way</label>
+                <select id="dropdown" name="ninja-ways">
+                    <option value="taijutsu">Taijutsu</option>
+                    <option value="ninjutsu">Ninjutsu</option>
+                    <option value="genjutsu">Genjutsu</option>
+                </select><br><br>
+                <p>Select your <strong>ninja weapon:</strong></p>
+                <label for="shuriken" id="shuriken-label">Shuriken</label>
+                <input type="radio" id="shuriken" name="ninja-weapon" value="shuriken" checked>
+                <label for="kunai" id="kunai-label">Kunai</label>
+                <input type="radio" id="kunai" name="ninja-weapon" value="kunai">
+                <label for="katana" id=katana-label>Katana</label>
+                <input type="radio" id="katana" name="ninja-weapon" value="katana"></input><br><br>
+                <p>Select your <strong>ninja attributes:</strong></p>
+                <label for="strength" id="strength-label">Strength</label>
+                <input type="checkbox" id="strength" name="strength" value="strength" checked>
+                <label for="intelligence" id="intelligence-label">Intelligence</label>
+                <input type="checkbox" id="intelligence" name="intelligence" value="intelligence">
+                <label for="stealth" id="stealth-label">Steatlh</label>
+                <input type="checkbox" id="stealth" name="stealth" value="stealth"><br><br>
+                <label for="additional-comments" id="additional-comments-label">Additional Comments here:</label><br><br>
+                <textarea id="additional-comments" rows="5" cols="50"></textarea><br><br>
+                <input type="submit" class="submit-class">
+            </form>
+        </main>
+        <footer>
+            <p>Hope you like our project for the Microverse trials! Thank you for stepping by!</p>
+        </footer>
     </body>
 </html>
