@@ -2,10 +2,25 @@
 <html>
     <head>
         <title>
-                Microverse trials
+                Ninja Survey
         </title>
     </head>
     <body>
-        <h1>Hello world! We are software developers!</h1>
+        <h1 id="title">Ninja Survey</h1>
+        <p>If you're a ninja please take this survey.</p>
+        <form id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="number" id="number-label">Phone Number</label>
+            <input type="number" id="number" name="number">
+            <label for="dropdown" id="dropdown-label">Choose a Ninja Way</label>
+            <select id="dropdown" name="ninja-ways">
+                <option value="taijutsu">Taijutsu</option>
+                <option value="ninjutsu">Ninjutsu</option>
+                <option value="genjutsu">Genjutsu</option>
+            </select>
+        </form>
     </body>
 </html>
